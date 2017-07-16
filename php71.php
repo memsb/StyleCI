@@ -71,8 +71,6 @@ $i = 0;
 $i += 1;
 $i = $i + 1;
 
-
-$result ??= 'backup';
 $result = $result ?? 'backup';
 
 try {
