@@ -7,8 +7,7 @@ interface OldInterface
 
 class OldWorker implements OldInterface {
 
-    public function oldMethod(string $arg): string
-    {
+    public function oldMethod(string $arg): string    {
         return $arg;
     }
 }
