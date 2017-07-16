@@ -33,7 +33,6 @@ $result = addArrays($left, $right);
 
 echo implode('', $left).' + '.implode('', $right).' = '.implode('', $result).PHP_EOL;
 
-
 function getNumberString(int $length): string
 {
     return implode('', getNumberArray($length));
@@ -58,5 +57,3 @@ $right = getNumberString($length);
 $result = addStrings($left, $right);
 
 echo "{$left} + {$right} = {$result}".PHP_EOL;
-
-

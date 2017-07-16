@@ -1,11 +1,12 @@
 <?php
 
-interface Wash {
-public function run();
+interface Wash
+{
+    public function run();
 }
 
-class Washer implements Wash {
-
+class Washer implements Wash
+{
     public function run()
     {
         $this->soak();
@@ -43,7 +44,6 @@ class Washer implements Wash {
 
 class FastWasher extends Washer
 {
-
     protected function wash()
     {
         echo 'wash for 20 mins';

@@ -9,10 +9,8 @@
  * constant visibility
  */
 
-
 class MyClass
 {
-
     public const NAME = 'My Awesome Class';
     protected const SLIGHTLY_SECRET_NAME = 'My Awesome Class';
     private const SECRET_NAME = 'My Awesome Class';
@@ -39,8 +37,8 @@ class MyClass
             throw new InvalidArgumentException('name not found');
         }
 
-        if($name == self::NAME){
-           throw new BadFunctionCallException("that's me!");
+        if ($name == self::NAME) {
+            throw new BadFunctionCallException("that's me!");
         }
 
         return $name;
@@ -65,7 +63,7 @@ $class = new MyClass();
 $class->addName('Martin');
 
 $result = $possible ?? 'backup';
-echo $result . PHP_EOL;
+echo $result.PHP_EOL;
 
 $i = 0;
 $i += 1;
@@ -76,6 +74,6 @@ $result = $result ?? 'backup';
 try {
     echo 'Hello '.$class->findName('Martin').PHP_EOL;
     echo 'Hello '.$class->findName(MyClass::NAME).PHP_EOL;
-}catch(BadFunctionCallException | InvalidArgumentException $e){
-    echo $e->getMessage() . PHP_EOL;
+} catch (BadFunctionCallException | InvalidArgumentException $e) {
+    echo $e->getMessage().PHP_EOL;
 }

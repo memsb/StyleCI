@@ -2,7 +2,6 @@
 
 class Node
 {
-
     /** @var string */
     protected $value;
 
@@ -30,10 +29,8 @@ class Node
     }
 }
 
-
 class LinkedList
 {
-
     /** @var Node */
     protected $start;
 
@@ -50,7 +47,7 @@ class LinkedList
         if (empty($this->start)) {
             $this->start = $node;
             $this->end = $node;
-        }else {
+        } else {
             $this->end->setNext($node);
             $this->end = $node;
         }
@@ -59,7 +56,6 @@ class LinkedList
 
 class DoubleNode
 {
-
     /** @var string */
     protected $value;
 
@@ -123,7 +119,7 @@ class DoubleLinkedList
         if (empty($this->start)) {
             $this->start = $node;
             $this->end = $node;
-        }else {
+        } else {
             $this->end->setNext($node);
             $node->setPrev($this->end);
             $this->end = $node;
@@ -133,7 +129,6 @@ class DoubleLinkedList
 
 class Stack
 {
-
     private $items = [];
 
     public function add($item)
@@ -156,7 +151,6 @@ foreach ($nums as $num) {
     $list->append($node);
 }
 
-
 $stack = new Stack();
 $current = $list->getStart();
 while ($current !== null) {
@@ -173,8 +167,7 @@ for ($i = 0; $i < $fromEnd; $i++) {
 echo $found.PHP_EOL;
 
 $endedAt = microtime(true);
-echo (($endedAt - $startedAt) * 1000000).PHP_EOL;
-
+echo(($endedAt - $startedAt) * 1000000).PHP_EOL;
 
 $dll = new DoubleLinkedList();
 $current = $list->getStart();
@@ -193,4 +186,4 @@ for ($i = 1; $i < $fromEnd; $i++) {
 echo $current->getValue().PHP_EOL;
 
 $endedAt = microtime(true);
-echo (($endedAt - $startedAt) * 1000000).PHP_EOL;
+echo(($endedAt - $startedAt) * 1000000).PHP_EOL;

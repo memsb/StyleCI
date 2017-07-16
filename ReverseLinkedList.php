@@ -2,7 +2,6 @@
 
 class Node
 {
-
     /** @var string */
     protected $value;
 
@@ -30,10 +29,8 @@ class Node
     }
 }
 
-
 class LinkedList
 {
-
     /** @var Node */
     protected $start;
 
@@ -59,7 +56,6 @@ class LinkedList
 
 class Stack
 {
-
     private $items = [];
 
     public function add($item)

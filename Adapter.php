@@ -5,15 +5,16 @@ interface OldInterface
     public function oldMethod(string $arg): string;
 }
 
-class OldWorker implements OldInterface {
-
-    public function oldMethod(string $arg): string    {
+class OldWorker implements OldInterface
+{
+    public function oldMethod(string $arg): string
+    {
         return $arg;
     }
 }
 
-class Client {
-
+class Client
+{
     private $worker;
 
     public function __construct(OldInterface $worker)
@@ -32,17 +33,16 @@ interface NewInterface
     public function newMethod(string $arg): string;
 }
 
-class NewWorker implements NewInterface {
-
+class NewWorker implements NewInterface
+{
     public function newMethod(string $arg): string
     {
         return strtoupper($arg);
     }
 }
 
-
-class NewInterfaceAdapter implements OldInterface {
-
+class NewInterfaceAdapter implements OldInterface
+{
     private $newInterface;
 
     public function __construct(NewInterface $newInterface)
@@ -57,4 +57,4 @@ class NewInterfaceAdapter implements OldInterface {
 }
 
 $client = new Client(new NewInterfaceAdapter(new NewWorker()));
-echo $client->doStuff() . PHP_EOL;
+echo $client->doStuff().PHP_EOL;

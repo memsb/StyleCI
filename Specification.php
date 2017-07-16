@@ -2,7 +2,6 @@
 
 class Rate
 {
-
     public function getPrice()
     {
         return 5;
@@ -11,13 +10,11 @@ class Rate
 
 interface Specification
 {
-
     public function isSatisfiedBy(Rate $rate);
 }
 
 class Plus implements Specification
 {
-
     private $left;
     private $right;
 
@@ -35,7 +32,6 @@ class Plus implements Specification
 
 class Either implements Specification
 {
-
     private $left;
     private $right;
 
@@ -53,7 +49,6 @@ class Either implements Specification
 
 class ExclusiveEither implements Specification
 {
-
     private $left;
     private $right;
 
@@ -65,13 +60,12 @@ class ExclusiveEither implements Specification
 
     public function isSatisfiedBy(Rate $rate)
     {
-        return $this->left->isSatisfiedBy($rate) XOR $this->right->isSatisfiedBy($rate);
+        return $this->left->isSatisfiedBy($rate) xor $this->right->isSatisfiedBy($rate);
     }
 }
 
 class Not implements Specification
 {
-
     private $spec;
 
     public function __construct(Specification $spec)

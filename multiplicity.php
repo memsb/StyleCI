@@ -11,4 +11,4 @@ usort(
     }
 );
 
-echo implode($multiSet, ',') . PHP_EOL;
+echo implode($multiSet, ',').PHP_EOL;

@@ -2,7 +2,6 @@
 
 class Node
 {
-
     /** @var string */
     protected $value;
 
@@ -30,10 +29,8 @@ class Node
     }
 }
 
-
 class LinkedList
 {
-
     /** @var Node */
     protected $start;
 
@@ -75,7 +72,6 @@ class LinkedList
 
 class Stack
 {
-
     private $list;
 
     public function __construct()
@@ -92,7 +88,7 @@ class Stack
     {
         $first = $this->list->getStart();
         if (!$first) {
-            return null;
+            return;
         }
         $next = $first->getNext();
         $this->list->setStart($next);

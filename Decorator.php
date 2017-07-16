@@ -7,7 +7,6 @@ interface Renderable
 
 class Component implements Renderable
 {
-
     public function render()
     {
         // TODO: Implement render() method.
@@ -16,7 +15,6 @@ class Component implements Renderable
 
 abstract class Container implements Renderable
 {
-
     private $renderable;
 
     public function __construct(Renderable $renderable)
@@ -32,12 +30,10 @@ abstract class Container implements Renderable
 
 class Wrapper1 extends Container
 {
-
 }
 
 class Wrapper2 extends Container
 {
-
 }
 
 $item = new Wrapper1(new Wrapper2(new Wrapper1(new Component())));

@@ -3,7 +3,6 @@
 
 $length = 2;
 
-
 function getHexArray(int $length): array
 {
     $arr = [];
@@ -14,7 +13,6 @@ function getHexArray(int $length): array
     return $arr;
 }
 
-
 function addHex($left, $right)
 {
     $sum = [];
@@ -24,7 +22,7 @@ function addHex($left, $right)
         if ($value > 15) {
             $value %= 16;
             $carry = 1;
-        }else{
+        } else {
             $carry = 0;
         }
         array_unshift($sum, dechex($value));

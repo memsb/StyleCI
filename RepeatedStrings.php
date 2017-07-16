@@ -4,7 +4,6 @@
 
 $string = 'aabbcccccdddddeeeeefggggghijjka';
 
-
 // long but correct
 $output = '';
 $buffer = [];
@@ -20,7 +19,6 @@ for ($i = 0; $i < strlen($string); $i++) {
 
 echo $output.PHP_EOL;
 
-
 // Compact but flawed
 
 $histo = array_count_values(str_split($string));
@@ -30,5 +28,3 @@ echo array_reduce(
             return $carry.$histo[$key].$key;
         }
     ).PHP_EOL;
-
-
